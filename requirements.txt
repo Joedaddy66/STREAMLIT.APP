@@ -1,4 +1,6 @@
 streamlit
+plotly
 google-generativeai
 pandas
 numpy
+streamlit-extras

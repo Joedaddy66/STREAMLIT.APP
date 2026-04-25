@@ -2,9 +2,16 @@ import hashlib
 import importlib.util
 import json
 import math
-import os
-import re
 import sys
+import os
+from pathlib import Path
+
+# Force the current directory into the Python path
+# This ensures 'packages' is visible to the interpreter
+current_dir = Path(__file__).parent.absolute()
+if str(current_dir) not in sys.path:
+    sys.path.insert(0, str(current_dir))
+    
 from datetime import datetime, timezone
 from io import StringIO
 from pathlib import Path

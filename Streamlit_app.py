@@ -1,3 +1,14 @@
+import sys
+import os
+from pathlib import Path
+
+# Anchor the repository root so the 'packages' folder is visible
+repo_root = Path(__file__).parent.absolute()
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+
+# Now your imports will work
+from packages.shared.spartan_shared.engagement_engine import engage_protocols, parse_protocol_endpoints
 import hashlib
 import importlib.util
 import json
